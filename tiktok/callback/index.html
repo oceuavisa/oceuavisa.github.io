@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>TikTok login · O Céu Avisa</title>
+<!--
+  Retorno do Login Kit do TikTok (ETAPA-31 E7). O app web do TikTok só aceita
+  redirect https; o publicador roda no Mac. Esta página repassa o `code` e o
+  `state` para o terminal que está esperando em http://127.0.0.1:8765/callback/.
+  O código sozinho não vale nada: a troca pelo token exige o client secret e o
+  code_verifier do PKCE, que só existem no Mac. Nada aqui é gravado ou enviado
+  a terceiros (sem script externo, sem cookie, sem referrer).
+-->
+<style>
+  :root { --noite:#0B1026; --noite2:#141B3D; --marfim:#F4EFE6; --suave:#B9B6C9; --ciano:#5CE1E6; }
+  body { margin:0; background:linear-gradient(var(--noite),var(--noite2)); color:var(--marfim); font:18px/1.6 Georgia,"Times New Roman",serif; min-height:100vh }
+  main { max-width:640px; margin:0 auto; padding:48px 20px 64px }
+  a { color:var(--ciano) } .meta { color:var(--suave); font-size:.95rem }
+</style>
+</head>
+<body>
+<main>
+  <h1>O Céu Avisa · TikTok</h1>
+  <p id="msg">Returning to the publishing tool on this computer…</p>
+  <p class="meta" id="extra"></p>
+</main>
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var msg = document.getElementById("msg");
+    var extra = document.getElementById("extra");
+    if (!q.has("state") || !(q.has("code") || q.has("error"))) {
+      msg.textContent = "This page only completes the TikTok login of the channel's own publishing tool.";
+      return;
+    }
+    var destino = "http://127.0.0.1:8765/callback/" + location.search;
+    history.replaceState(null, "", location.pathname);  // tira o código da barra e do histórico
+    if (q.has("error")) {
+      msg.textContent = "TikTok login was cancelled (" + q.get("error") + "). You can close this tab.";
+    }
+    extra.innerHTML = 'If nothing happens, make sure <code>publicar.py autorizar tiktok</code> is running, then <a id="ir">continue</a>.';
+    document.getElementById("ir").href = destino;
+    location.replace(destino);
+  })();
+</script>
+</body>
+</html>
