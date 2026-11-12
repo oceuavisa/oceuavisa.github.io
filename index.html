@@ -47,33 +47,30 @@
 
 <section id="como-funciona"><div class="wrap">
   <span class="sobre">Como funciona</span>
-  <h2>Três passos, sem cadastro</h2>
-  <div class="grade tres">
+  <h2 class="so-venda">Três passos, sem cadastro</h2>
+  <h2 class="so-espera">Dois passos, sem cadastro</h2>
+  <div class="grade tres por-modo">
     <div class="cartao"><span class="passo-n" aria-hidden="true">1</span><h3>Você conta</h3><p>Nome, data, hora e cidade em que nasceu (se não souber a hora, tudo bem) e três perguntas sobre o que importa para você agora.</p></div>
-    <div class="cartao"><span class="passo-n" aria-hidden="true">2</span><h3>Você paga</h3><p>Pix ou cartão, com o preço final na tela. Se a leitura não puder ser feita, o dinheiro volta.</p></div>
-    <div class="cartao"><span class="passo-n" aria-hidden="true">3</span><h3>Você recebe</h3><p>Na data agendada, que você vê antes de pagar (em até 48 horas), chega um e-mail com o link do vídeo e do PDF. O link vale 30 dias.</p></div>
+    <div class="cartao so-venda"><span class="passo-n" aria-hidden="true">2</span><h3>Você paga</h3><p>Pix ou cartão, com o preço final na tela. Se a leitura não puder ser feita, o dinheiro volta.</p></div>
+    <div class="cartao so-venda"><span class="passo-n" aria-hidden="true">3</span><h3>Você recebe</h3><p>Na data agendada, que você vê antes de pagar (em até 48 horas), chega um e-mail com o link do vídeo e do PDF. O link vale 30 dias.</p></div>
+    <div class="cartao so-espera"><span class="passo-n" aria-hidden="true">2</span><h3>Você recebe o aviso</h3><p>Os pedidos ainda não abriram. Deixe o seu e-mail na <a href="/leitura/">lista de espera</a> e a gente avisa uma vez, quando abrir.</p></div>
   </div>
 </div></section>
 
 <section id="amostra" class="faixa"><div class="wrap amostra">
   <figure style="margin:0">
-    <div class="poster" role="img" aria-label="Quadro do vídeo de exemplo: a roda do mapa natal no alto e a dupla Tales e Lira embaixo. O vídeo de exemplo ainda vai ser publicado.">
-      <span class="tag">Conteúdo gerado por IA</span>
-      <div class="roda"></div>
-      <div class="play"></div>
-      <span class="em-breve">Exemplo em breve</span>
-      <div class="rodape"><img src="/ativos/dupla.webp" width="256" height="256" alt=""><span class="cap">Sua leitura, pergunta 1</span></div>
-    </div>
-    <!-- VÍDEO DE AMOSTRA (entrega L8, parte 2, depois do template L4): trocar o .poster por
-         <iframe src="https://www.youtube-nocookie.com/embed/ID" title="Exemplo de leitura" loading="lazy" allowfullscreen> ou
-         <video controls preload="none" poster="/ativos/amostra-poster.webp"><source src="…mp4"><track kind="captions" src="…vtt"></video>.
-         A amostra tem de ser de pessoa FICTÍCIA e levar o selo de IA. -->
+    <video class="amostra-video" controls preload="none" playsinline poster="/ativos/amostra/amostra-marina-poster.webp" width="720" height="1280" aria-describedby="amostra-legenda">
+      <source src="/ativos/amostra/amostra-marina.mp4" type="video/mp4">
+      <track kind="captions" srclang="pt-BR" label="Português (Brasil)" src="/ativos/amostra/amostra-marina.vtt">
+      Seu navegador não toca vídeo. O exemplo é um trecho de uma leitura de 7 a 9 minutos, feito com IA para uma pessoa fictícia.
+    </video>
+    <figcaption id="amostra-legenda" class="suave pequeno">Exemplo feito com IA, para uma pessoa fictícia (Marina). Um trecho de 1 minuto e meio de uma leitura de 7 a 9 minutos.</figcaption>
   </figure>
   <div>
     <span class="sobre">Exemplo</span>
     <h2>Assim é uma leitura</h2>
-    <p>Um minuto de uma leitura feita para uma pessoa fictícia: o nome dela na tela, o mapa, os trânsitos com data, as três cartas da pergunta e a seed do sorteio.</p>
-    <p class="suave">O exemplo ainda está sendo gravado. Não mostramos leituras de clientes de verdade: o seu pedido é só seu.</p>
+    <p>Um trecho de uma leitura feita para uma pessoa fictícia: a pergunta dela, os trânsitos com data, as três cartas e a seed do sorteio na tela.</p>
+    <p class="suave">Não mostramos leituras de clientes de verdade: o seu pedido é só seu.</p>
   </div>
 </div></section>
 
