@@ -1,0 +1,395 @@
+{
+ "id": "rws-78",
+ "cartas": [
+  {
+   "id": "rws-00",
+   "number": 0,
+   "name": "O Louco"
+  },
+  {
+   "id": "rws-01",
+   "number": 1,
+   "name": "O Mago"
+  },
+  {
+   "id": "rws-02",
+   "number": 2,
+   "name": "A Sacerdotisa"
+  },
+  {
+   "id": "rws-03",
+   "number": 3,
+   "name": "A Imperatriz"
+  },
+  {
+   "id": "rws-04",
+   "number": 4,
+   "name": "O Imperador"
+  },
+  {
+   "id": "rws-05",
+   "number": 5,
+   "name": "O Hierofante"
+  },
+  {
+   "id": "rws-06",
+   "number": 6,
+   "name": "Os Enamorados"
+  },
+  {
+   "id": "rws-07",
+   "number": 7,
+   "name": "O Carro"
+  },
+  {
+   "id": "rws-08",
+   "number": 8,
+   "name": "A Força"
+  },
+  {
+   "id": "rws-09",
+   "number": 9,
+   "name": "O Eremita"
+  },
+  {
+   "id": "rws-10",
+   "number": 10,
+   "name": "A Roda da Fortuna"
+  },
+  {
+   "id": "rws-11",
+   "number": 11,
+   "name": "A Justiça"
+  },
+  {
+   "id": "rws-12",
+   "number": 12,
+   "name": "O Enforcado"
+  },
+  {
+   "id": "rws-13",
+   "number": 13,
+   "name": "A Morte"
+  },
+  {
+   "id": "rws-14",
+   "number": 14,
+   "name": "A Temperança"
+  },
+  {
+   "id": "rws-15",
+   "number": 15,
+   "name": "O Diabo"
+  },
+  {
+   "id": "rws-16",
+   "number": 16,
+   "name": "A Torre"
+  },
+  {
+   "id": "rws-17",
+   "number": 17,
+   "name": "A Estrela"
+  },
+  {
+   "id": "rws-18",
+   "number": 18,
+   "name": "A Lua"
+  },
+  {
+   "id": "rws-19",
+   "number": 19,
+   "name": "O Sol"
+  },
+  {
+   "id": "rws-20",
+   "number": 20,
+   "name": "O Julgamento"
+  },
+  {
+   "id": "rws-21",
+   "number": 21,
+   "name": "O Mundo"
+  },
+  {
+   "id": "rws-22",
+   "number": 22,
+   "name": "Ás de Paus"
+  },
+  {
+   "id": "rws-23",
+   "number": 23,
+   "name": "Dois de Paus"
+  },
+  {
+   "id": "rws-24",
+   "number": 24,
+   "name": "Três de Paus"
+  },
+  {
+   "id": "rws-25",
+   "number": 25,
+   "name": "Quatro de Paus"
+  },
+  {
+   "id": "rws-26",
+   "number": 26,
+   "name": "Cinco de Paus"
+  },
+  {
+   "id": "rws-27",
+   "number": 27,
+   "name": "Seis de Paus"
+  },
+  {
+   "id": "rws-28",
+   "number": 28,
+   "name": "Sete de Paus"
+  },
+  {
+   "id": "rws-29",
+   "number": 29,
+   "name": "Oito de Paus"
+  },
+  {
+   "id": "rws-30",
+   "number": 30,
+   "name": "Nove de Paus"
+  },
+  {
+   "id": "rws-31",
+   "number": 31,
+   "name": "Dez de Paus"
+  },
+  {
+   "id": "rws-32",
+   "number": 32,
+   "name": "Valete de Paus"
+  },
+  {
+   "id": "rws-33",
+   "number": 33,
+   "name": "Cavaleiro de Paus"
+  },
+  {
+   "id": "rws-34",
+   "number": 34,
+   "name": "Rainha de Paus"
+  },
+  {
+   "id": "rws-35",
+   "number": 35,
+   "name": "Rei de Paus"
+  },
+  {
+   "id": "rws-36",
+   "number": 36,
+   "name": "Ás de Copas"
+  },
+  {
+   "id": "rws-37",
+   "number": 37,
+   "name": "Dois de Copas"
+  },
+  {
+   "id": "rws-38",
+   "number": 38,
+   "name": "Três de Copas"
+  },
+  {
+   "id": "rws-39",
+   "number": 39,
+   "name": "Quatro de Copas"
+  },
+  {
+   "id": "rws-40",
+   "number": 40,
+   "name": "Cinco de Copas"
+  },
+  {
+   "id": "rws-41",
+   "number": 41,
+   "name": "Seis de Copas"
+  },
+  {
+   "id": "rws-42",
+   "number": 42,
+   "name": "Sete de Copas"
+  },
+  {
+   "id": "rws-43",
+   "number": 43,
+   "name": "Oito de Copas"
+  },
+  {
+   "id": "rws-44",
+   "number": 44,
+   "name": "Nove de Copas"
+  },
+  {
+   "id": "rws-45",
+   "number": 45,
+   "name": "Dez de Copas"
+  },
+  {
+   "id": "rws-46",
+   "number": 46,
+   "name": "Valete de Copas"
+  },
+  {
+   "id": "rws-47",
+   "number": 47,
+   "name": "Cavaleiro de Copas"
+  },
+  {
+   "id": "rws-48",
+   "number": 48,
+   "name": "Rainha de Copas"
+  },
+  {
+   "id": "rws-49",
+   "number": 49,
+   "name": "Rei de Copas"
+  },
+  {
+   "id": "rws-50",
+   "number": 50,
+   "name": "Ás de Espadas"
+  },
+  {
+   "id": "rws-51",
+   "number": 51,
+   "name": "Dois de Espadas"
+  },
+  {
+   "id": "rws-52",
+   "number": 52,
+   "name": "Três de Espadas"
+  },
+  {
+   "id": "rws-53",
+   "number": 53,
+   "name": "Quatro de Espadas"
+  },
+  {
+   "id": "rws-54",
+   "number": 54,
+   "name": "Cinco de Espadas"
+  },
+  {
+   "id": "rws-55",
+   "number": 55,
+   "name": "Seis de Espadas"
+  },
+  {
+   "id": "rws-56",
+   "number": 56,
+   "name": "Sete de Espadas"
+  },
+  {
+   "id": "rws-57",
+   "number": 57,
+   "name": "Oito de Espadas"
+  },
+  {
+   "id": "rws-58",
+   "number": 58,
+   "name": "Nove de Espadas"
+  },
+  {
+   "id": "rws-59",
+   "number": 59,
+   "name": "Dez de Espadas"
+  },
+  {
+   "id": "rws-60",
+   "number": 60,
+   "name": "Valete de Espadas"
+  },
+  {
+   "id": "rws-61",
+   "number": 61,
+   "name": "Cavaleiro de Espadas"
+  },
+  {
+   "id": "rws-62",
+   "number": 62,
+   "name": "Rainha de Espadas"
+  },
+  {
+   "id": "rws-63",
+   "number": 63,
+   "name": "Rei de Espadas"
+  },
+  {
+   "id": "rws-64",
+   "number": 64,
+   "name": "Ás de Ouros"
+  },
+  {
+   "id": "rws-65",
+   "number": 65,
+   "name": "Dois de Ouros"
+  },
+  {
+   "id": "rws-66",
+   "number": 66,
+   "name": "Três de Ouros"
+  },
+  {
+   "id": "rws-67",
+   "number": 67,
+   "name": "Quatro de Ouros"
+  },
+  {
+   "id": "rws-68",
+   "number": 68,
+   "name": "Cinco de Ouros"
+  },
+  {
+   "id": "rws-69",
+   "number": 69,
+   "name": "Seis de Ouros"
+  },
+  {
+   "id": "rws-70",
+   "number": 70,
+   "name": "Sete de Ouros"
+  },
+  {
+   "id": "rws-71",
+   "number": 71,
+   "name": "Oito de Ouros"
+  },
+  {
+   "id": "rws-72",
+   "number": 72,
+   "name": "Nove de Ouros"
+  },
+  {
+   "id": "rws-73",
+   "number": 73,
+   "name": "Dez de Ouros"
+  },
+  {
+   "id": "rws-74",
+   "number": 74,
+   "name": "Valete de Ouros"
+  },
+  {
+   "id": "rws-75",
+   "number": 75,
+   "name": "Cavaleiro de Ouros"
+  },
+  {
+   "id": "rws-76",
+   "number": 76,
+   "name": "Rainha de Ouros"
+  },
+  {
+   "id": "rws-77",
+   "number": 77,
+   "name": "Rei de Ouros"
+  }
+ ]
+}

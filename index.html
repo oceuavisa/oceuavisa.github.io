@@ -3,41 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>O Céu Avisa</title>
-<meta name="description" content="O Céu Avisa: astrologia e tarô sobre o mundo. Céu calculado, cartas sorteadas com a semente na tela. Conteúdo feito com IA.">
-<link rel="icon" href="foto-perfil.png">
-<style>
-  :root { --noite:#0B1026; --noite2:#141B3D; --marfim:#F4EFE6; --suave:#B9B6C9; --ouro:#E8B94A; --ciano:#5CE1E6; }
-  * { box-sizing:border-box }
-  body { margin:0; background:linear-gradient(var(--noite),var(--noite2)); color:var(--marfim); font:18px/1.6 Georgia,"Times New Roman",serif; min-height:100vh }
-  main { max-width:720px; margin:0 auto; padding:48px 20px 64px }
-  img.perfil { width:160px; height:160px; border-radius:50%; display:block; margin:0 auto 24px; border:2px solid rgba(232,185,74,.5) }
-  h1 { font-size:2.4rem; margin:0 0 4px; text-align:center }
-  p.assinatura { text-align:center; color:var(--suave); margin:0 0 32px; font-style:italic }
-  a { color:var(--ciano) }
-  ul.redes { list-style:none; padding:0; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:0 0 40px }
-  ul.redes a { display:inline-block; padding:10px 18px; border:1px solid var(--ouro); border-radius:999px; color:var(--ouro); text-decoration:none }
-  .nota { font-size:.95rem; color:var(--suave); border-top:1px solid rgba(244,239,230,.15); padding-top:20px; margin-top:40px }
-</style>
+<title>O Céu Avisa — a sua leitura de astrologia e tarô em vídeo e PDF</title>
+<meta name="description" content="Leitura personalizada com 3 perguntas: o Tales lê o seu mapa, a Lira tira as cartas. Vídeo de 7 a 9 minutos e PDF, entregues na data agendada, em até 48 horas. Conteúdo feito com IA.">
+
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="theme-color" content="#0B1026">
+<meta property="og:title" content="O Céu Avisa — a sua leitura de astrologia e tarô em vídeo e PDF"><meta property="og:description" content="Leitura personalizada com 3 perguntas: o Tales lê o seu mapa, a Lira tira as cartas. Vídeo de 7 a 9 minutos e PDF, entregues na data agendada, em até 48 horas. Conteúdo feito com IA."><meta property="og:image" content="https://oceuavisa.com.br/ativos/dupla-grande.webp"><meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/foto-perfil.png">
+<link rel="preload" href="/ativos/fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/ativos/config.js"></script>
+<link rel="stylesheet" href="/ativos/site.css">
 </head>
 <body>
-<main>
-  <img class="perfil" src="foto-perfil.png" alt="Tales e Lira, os apresentadores do canal">
-  <h1>O Céu Avisa</h1>
-  <p class="assinatura">astrologia e tarô sobre o mundo</p>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="/"><img src="/ativos/dupla.webp" width="38" height="38" alt="">O Céu Avisa</a>
+  <nav aria-label="Principal">
+    <a class="opc" href="/#como-funciona">Como funciona</a>
+    <a class="opc" href="/perguntas/">Perguntas</a>
+    <a class="cta-mini so-venda" href="/leitura/">Quero a minha leitura</a>
+    <a class="cta-mini so-espera" href="/leitura/#lista">Avise-me</a>
+  </nav>
+</div></header>
+<main id="conteudo">
 
-  <ul class="redes">
-    <li><a href="https://www.youtube.com/channel/UC0RSvlqVQVnGeF4RLn_7RAg">YouTube</a></li>
-    <li><a href="https://www.instagram.com/oceuavisa">Instagram</a></li>
-    <li><a href="https://www.tiktok.com/@oceuavisa">TikTok</a></li>
-  </ul>
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="sobre">Leitura personalizada · astrologia + tarô</span>
+    <h1>O seu céu e as suas cartas, em vídeo.</h1>
+    <p class="lead">Conte três perguntas e a data em que você nasceu. Na data agendada, em até 48 horas, o Tales lê o seu mapa e os próximos meses do céu, e a Lira tira as cartas de cada pergunta. Você recebe um <strong>vídeo vertical de 7 a 9 minutos</strong> e um <strong>PDF</strong>, no seu e-mail.</p>
+    <p class="preco so-venda"><b>R$ 29,90</b> <s>R$ 49,90</s> <span class="suave pequeno">preço de lançamento</span></p>
+    <div class="aviso info so-espera"><strong>Os pedidos abrem em breve.</strong> Deixe o seu e-mail na lista de espera e a gente avisa uma vez, quando abrir.</div>
+    <div class="aviso info so-fechada nao-espera"><strong>Em breve.</strong> Estamos preparando a abertura dos pedidos. Enquanto isso, acompanhe os vídeos do canal e veja abaixo como a leitura vai funcionar.</div>
+    <div class="acoes">
+      <a class="btn so-venda" href="/leitura/">Quero a minha leitura</a>
+      <a class="btn so-espera" href="/leitura/#lista">Quero ser avisada(o)</a>
+      <a class="btn sec" href="#amostra">Ver um exemplo</a>
+    </div>
+    <p class="pequeno suave">Conteúdo feito com IA, para reflexão e entretenimento. Para maiores de 18 anos.</p>
+  </div>
+  <div class="dupla"><img src="/ativos/dupla-grande.webp" width="600" height="600" alt="Tales e Lira, os dois apresentadores do canal, desenhados em estilo ilustrado, diante de um céu estrelado"></div>
+</div></section>
 
-  <p>Um canal de astrologia mundana e tarô sobre o mundo: 2027, os signos, as regiões que os eclipses atravessam e os acontecimentos da semana lidos pelo céu do momento.</p>
-  <p>Quem apresenta é a dupla <strong>Tales</strong> e <strong>Lira</strong>. O Tales lê o céu: mapas, trânsitos e ciclos calculados com efemérides reais. A Lira lê as cartas: a tiragem é sorteada pelo código, com a semente na tela, e nunca escolhida para caber na história.</p>
-  <p>Toda semana: o céu da semana (segunda), um fato do mundo em contexto (terça), 2027 e as regiões (quinta) e a série “2027 signo a signo” (quarta, sexta e sábado). Aos domingos, uma análise longa.</p>
+<section id="como-funciona"><div class="wrap">
+  <span class="sobre">Como funciona</span>
+  <h2>Três passos, sem cadastro</h2>
+  <div class="grade tres">
+    <div class="cartao"><span class="passo-n" aria-hidden="true">1</span><h3>Você conta</h3><p>Nome, data, hora e cidade em que nasceu (se não souber a hora, tudo bem) e três perguntas sobre o que importa para você agora.</p></div>
+    <div class="cartao"><span class="passo-n" aria-hidden="true">2</span><h3>Você paga</h3><p>Pix ou cartão, com o preço final na tela. Se a leitura não puder ser feita, o dinheiro volta.</p></div>
+    <div class="cartao"><span class="passo-n" aria-hidden="true">3</span><h3>Você recebe</h3><p>Na data agendada, que você vê antes de pagar (em até 48 horas), chega um e-mail com o link do vídeo e do PDF. O link vale 30 dias.</p></div>
+  </div>
+</div></section>
 
-  <p class="nota">Astrologia e tarô são tradição simbólica, para reflexão e entretenimento. O canal não prevê morte, doença ou resultado de eleição, não dá palpite de aposta e é apartidário. Os apresentadores são personagens de IA e todo vídeo é marcado como conteúdo gerado por IA.<br>
-  <a href="privacidade.html">Política de privacidade</a> · <a href="termos.html">Termos de uso</a> · Contato: <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a></p>
+<section id="amostra" class="faixa"><div class="wrap amostra">
+  <figure style="margin:0">
+    <div class="poster" role="img" aria-label="Quadro do vídeo de exemplo: a roda do mapa natal no alto e a dupla Tales e Lira embaixo. O vídeo de exemplo ainda vai ser publicado.">
+      <span class="tag">Conteúdo gerado por IA</span>
+      <div class="roda"></div>
+      <div class="play"></div>
+      <span class="em-breve">Exemplo em breve</span>
+      <div class="rodape"><img src="/ativos/dupla.webp" width="256" height="256" alt=""><span class="cap">Sua leitura, pergunta 1</span></div>
+    </div>
+    <!-- VÍDEO DE AMOSTRA (entrega L8, parte 2, depois do template L4): trocar o .poster por
+         <iframe src="https://www.youtube-nocookie.com/embed/ID" title="Exemplo de leitura" loading="lazy" allowfullscreen> ou
+         <video controls preload="none" poster="/ativos/amostra-poster.webp"><source src="…mp4"><track kind="captions" src="…vtt"></video>.
+         A amostra tem de ser de pessoa FICTÍCIA e levar o selo de IA. -->
+  </figure>
+  <div>
+    <span class="sobre">Exemplo</span>
+    <h2>Assim é uma leitura</h2>
+    <p>Um minuto de uma leitura feita para uma pessoa fictícia: o nome dela na tela, o mapa, os trânsitos com data, as três cartas da pergunta e a seed do sorteio.</p>
+    <p class="suave">O exemplo ainda está sendo gravado. Não mostramos leituras de clientes de verdade: o seu pedido é só seu.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="sobre">O que vem na leitura</span>
+  <h2>Vídeo e PDF, a mesma leitura</h2>
+  <div class="grade dois">
+    <div class="cartao"><h3>No vídeo (9:16, 7 a 9 minutos)</h3>
+      <ul class="lista ok">
+        <li>O Tales mostra o seu mapa natal e o que o céu faz nos próximos 6 meses, com datas.</li>
+        <li>Para cada pergunta, a Lira tira 3 cartas: o que favorece, o que pede atenção e o conselho.</li>
+        <li>Um capítulo por pergunta, para você achar a sua parte no celular.</li>
+        <li>O seu nome na tela e na voz, e a legenda palavra a palavra.</li>
+      </ul></div>
+    <div class="cartao"><h3>No PDF (6 a 10 páginas)</h3>
+      <ul class="lista ok">
+        <li>A mesma leitura por escrito, para guardar.</li>
+        <li>O mapa, a tabela de posições e a linha do tempo dos trânsitos.</li>
+        <li>As cartas desenhadas, uma página por pergunta.</li>
+        <li>Um resumo de uma página, com as datas para anotar.</li>
+      </ul></div>
+  </div>
+</div></section>
+
+<section class="faixa"><div class="wrap">
+  <span class="sobre">Por que confiar</span>
+  <h2>Nada aqui é escolhido para agradar</h2>
+  <div class="grade tres">
+    <div class="cartao"><h3>Cartas sorteadas por código</h3><p>A tiragem é sorteada por um programa, e a seed do sorteio aparece na tela. Cole a seed na <a href="/sorteio/">página do sorteio</a> e veja as mesmas cartas. A IA nunca escolhe as cartas.</p></div>
+    <div class="cartao"><h3>Céu calculado</h3><p>Mapa e trânsitos vêm de efemérides astronômicas, não de memória de uma IA. A IA só põe em palavras o que foi calculado e sorteado.</p></div>
+    <div class="cartao"><h3>Limites claros</h3><p>Não respondemos sobre morte, doença, resultado de processo, aposta ou eleição. <a href="/perguntas/">Veja o que a leitura não responde</a>.</p></div>
+  </div>
+</div></section>
+
+<section class="so-venda"><div class="wrap estreito">
+  <h2>Quanto custa</h2>
+  <div class="cartao">
+    <p class="preco"><b>R$ 29,90</b> <s>R$ 49,90</s></p>
+    <p>Preço de lançamento por tempo limitado. Inclui o vídeo, o PDF e as 3 perguntas. Sem assinatura e sem taxa escondida. Reembolso integral se a leitura não for entregue.</p>
+    <a class="btn cheio" href="/leitura/">Quero a minha leitura</a>
+  </div>
+  <p class="pequeno suave" style="margin-top:20px">O canal também publica, de graça, vídeos de astrologia e tarô sobre o mundo:
+    <a href="https://www.youtube.com/channel/UC0RSvlqVQVnGeF4RLn_7RAg">YouTube</a> · <a href="https://www.instagram.com/oceuavisa">Instagram</a> · <a href="https://www.tiktok.com/@oceuavisa">TikTok</a>.</p>
+</div></section>
+
 </main>
+<footer class="rodape-site"><div class="wrap">
+  <div>
+    <p><strong>O Céu Avisa</strong> · astrologia e tarô sobre o mundo</p>
+    <p><span class="selo">Conteúdo feito com IA</span> Tales e Lira são personagens de computador; textos e vozes são gerados por IA. Astrologia e tarô são para reflexão e entretenimento.</p>
+    <p>Contato: <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a></p>
+  </div>
+  <nav aria-label="Rodapé">
+    <a class="so-venda" href="/leitura/">Pedir leitura</a>
+    <a href="/perguntas/">Perguntas</a>
+    <a href="/privacidade.html">Privacidade</a>
+    <a href="/termos.html">Termos</a>
+    <a href="https://www.youtube.com/channel/UC0RSvlqVQVnGeF4RLn_7RAg">YouTube</a>
+    <a href="https://www.instagram.com/oceuavisa">Instagram</a>
+    <a href="https://www.tiktok.com/@oceuavisa">TikTok</a>
+  </nav>
+</div></footer>
+
 </body>
 </html>

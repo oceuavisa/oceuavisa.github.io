@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obrigado — O Céu Avisa</title>
+<meta name="description" content="Recebemos o seu pedido de leitura.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="theme-color" content="#0B1026">
+<meta property="og:title" content="Obrigado — O Céu Avisa"><meta property="og:description" content="Recebemos o seu pedido de leitura."><meta property="og:image" content="https://oceuavisa.com.br/ativos/dupla-grande.webp"><meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/foto-perfil.png">
+<link rel="preload" href="/ativos/fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/ativos/config.js"></script>
+<link rel="stylesheet" href="/ativos/site.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="/"><img src="/ativos/dupla.webp" width="38" height="38" alt="">O Céu Avisa</a>
+  <nav aria-label="Principal">
+    <a class="opc" href="/#como-funciona">Como funciona</a>
+    <a class="opc" href="/perguntas/">Perguntas</a>
+    <a class="cta-mini so-venda" href="/leitura/">Quero a minha leitura</a>
+  </nav>
+</div></header>
+<main id="conteudo">
+
+<div class="modo-demo" id="demo" hidden>Modo demonstração: nada foi enviado e nada foi cobrado.</div>
+<section><div class="wrap estreito">
+  <span class="sobre">Pedido recebido</span>
+  <h1>Obrigado! Recebemos o seu pedido.</h1>
+  <p class="lead">Quando o pagamento for confirmado, a sua leitura chega <strong>até a data agendada que você viu no resumo</strong> (em até 48 horas) no e-mail que você informou.</p>
+  <div class="cartao" style="margin-bottom:20px">
+    <p class="suave pequeno" style="margin-bottom:4px">Número do pedido</p>
+    <p style="font:600 1.4rem ui-monospace,Menlo,monospace;margin:0" id="num">—</p>
+  </div>
+  <h2>O que acontece agora</h2>
+  <ol class="lista">
+    <li>Confirmamos o pagamento (o Pix costuma cair em segundos).</li>
+    <li>Calculamos o seu céu, sorteamos as cartas das suas 3 perguntas e montamos o vídeo e o PDF.</li>
+    <li>Uma pessoa da equipe revê a leitura.</li>
+    <li>Você recebe um e-mail com o link, que vale 30 dias.</li>
+  </ol>
+  <div class="aviso info">Passou a data agendada e não chegou? Veja a caixa de spam e escreva para <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a> com o número do pedido. Se uma pergunta não puder ser respondida, avisamos por e-mail e você troca a pergunta ou pede o reembolso integral.</div>
+  <p><a class="btn sec" href="/">Voltar ao início</a></p>
+</div></section>
+
+</main>
+<footer class="rodape-site"><div class="wrap">
+  <div>
+    <p><strong>O Céu Avisa</strong> · astrologia e tarô sobre o mundo</p>
+    <p><span class="selo">Conteúdo feito com IA</span> Tales e Lira são personagens de computador; textos e vozes são gerados por IA. Astrologia e tarô são para reflexão e entretenimento.</p>
+    <p>Contato: <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a></p>
+  </div>
+  <nav aria-label="Rodapé">
+    <a class="so-venda" href="/leitura/">Pedir leitura</a>
+    <a href="/perguntas/">Perguntas</a>
+    <a href="/privacidade.html">Privacidade</a>
+    <a href="/termos.html">Termos</a>
+    <a href="https://www.youtube.com/channel/UC0RSvlqVQVnGeF4RLn_7RAg">YouTube</a>
+    <a href="https://www.instagram.com/oceuavisa">Instagram</a>
+    <a href="https://www.tiktok.com/@oceuavisa">TikTok</a>
+  </nav>
+</div></footer>
+<script src="/ativos/config.js"></script>
+<script>
+(function(){var q=new URLSearchParams(location.search);
+ document.getElementById("num").textContent=(q.get("p")||"—").replace(/[^A-Za-z0-9-]/g,"").slice(0,40)||"—";
+ if(q.get("demo")==="1")document.getElementById("demo").hidden=false;})();
+</script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confira o sorteio — O Céu Avisa</title>
+<meta name="description" content="Cole a seed que aparece no vídeo e veja as cartas que ela tira. O sorteio roda no seu navegador, com o mesmo código do canal.">
+
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="theme-color" content="#0B1026">
+<meta property="og:title" content="Confira o sorteio — O Céu Avisa"><meta property="og:description" content="Cole a seed do vídeo e veja as cartas que ela tira."><meta property="og:image" content="https://oceuavisa.com.br/ativos/dupla-grande.webp"><meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/foto-perfil.png">
+<link rel="preload" href="/ativos/fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/ativos/config.js"></script>
+<link rel="stylesheet" href="/ativos/site.css">
+<style>
+  .seed-campo{font-family:ui-monospace,Menlo,monospace !important;letter-spacing:.02em}
+  .opcoes{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;border:0}
+  .opcoes legend{font-weight:600;margin-bottom:6px;padding:0}
+  .opcoes label{display:inline-flex;align-items:center;gap:8px;font-weight:500;margin:0;padding:10px 16px;border:1.5px solid rgba(244,239,230,.4);border-radius:999px;cursor:pointer;min-height:44px}
+  .opcoes input{accent-color:var(--ouro);margin:0}
+  .opcoes label:has(input:checked){border-color:var(--ouro);background:rgba(232,185,74,.12)}
+  .tiragem{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+  .tiragem li{background:rgba(20,27,61,.72);border:1px solid var(--borda);border-radius:var(--raio);padding:16px 18px}
+  .tiragem .pos{display:block;font:600 .78rem/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--suave);margin-bottom:4px}
+  .tiragem .nome{display:block;font:600 1.2rem/1.3 var(--serif);color:var(--marfim)}
+  .tiragem .ori{display:inline-block;margin-top:8px;font-size:.9rem;padding:2px 10px;border-radius:999px;background:rgba(92,225,230,.12);color:var(--ciano)}
+  .tiragem .ori.inv{background:rgba(255,107,94,.12);color:var(--coral)}
+  .tiragem .ori.inv::before{content:"↓ "}
+  .mono{font-family:ui-monospace,Menlo,monospace;font-size:.92em;word-break:break-all}
+  #resultado:empty{display:none}
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="/"><img src="/ativos/dupla.webp" width="38" height="38" alt="">O Céu Avisa</a>
+  <nav aria-label="Principal">
+    <a class="opc" href="/#como-funciona">Como funciona</a>
+    <a class="opc" href="/perguntas/">Perguntas</a>
+    <a class="cta-mini so-venda" href="/leitura/">Quero a minha leitura</a>
+  </nav>
+</div></header>
+<main id="conteudo">
+
+<section><div class="wrap estreito texto">
+  <span class="sobre">Confira o sorteio</span>
+  <h1>A seed tira sempre as mesmas cartas</h1>
+  <p class="lead">Quem sorteia as cartas é um programa, não a gente nem a IA. Cada sorteio parte de um código chamado <strong>seed</strong>, que aparece no vídeo e na descrição. Cole a seed aqui e veja as cartas que ela tira.</p>
+
+  <form id="form-sorteio" novalidate>
+    <div class="campo">
+      <label for="seed">Seed</label>
+      <input type="text" id="seed" name="seed" class="seed-campo" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ex.: cf27e6c912099bb55cc950751cbd2113" aria-describedby="seed-ajuda">
+      <p id="seed-ajuda" class="pequeno" style="color:var(--suave);margin:6px 0 0">Copie exatamente como está no vídeo ou na descrição, sem espaços.</p>
+    </div>
+    <div class="campo">
+      <fieldset class="opcoes">
+        <legend>Quantas cartas o vídeo tirou</legend>
+        <label><input type="radio" name="n" value="1"> 1 carta</label>
+        <label><input type="radio" name="n" value="3" checked> 3 cartas</label>
+        <label><input type="radio" name="n" value="10"> 10 cartas (Árvore da Vida)</label>
+      </fieldset>
+    </div>
+    <button class="btn" type="submit">Ver as cartas</button>
+  </form>
+
+  <div id="resultado" aria-live="polite"></div>
+
+  <h2>Como funciona</h2>
+  <p>O programa embaralha as 78 cartas do tarô Rider-Waite-Smith a partir da seed e tira as primeiras, uma por posição, decidindo para cada uma se ela sai direita ou invertida. A mesma seed embaralha sempre do mesmo jeito. Por isso, as cartas que aparecem aqui têm que ser as mesmas do vídeo.</p>
+  <p>Este sorteio roda no seu navegador, com uma cópia exata do código que sorteia as cartas do canal. Nada é enviado para a gente. O código está aberto em <a href="/ativos/sorteio.js">sorteio.js</a>, e a lista das cartas, em <a href="/ativos/baralho-rws-78.json">baralho-rws-78.json</a>.</p>
+  <p>Na descrição do vídeo, o baralho aparece como <span class="marc">rws-78</span>. A impressão digital dele (<span class="mono">sha256</span>) começa com <span class="marc" id="hash-curto">05cfe827</span>. Se alguém trocar uma carta da lista, a impressão digital muda.</p>
+  <p>Os significados das cartas vêm de uma base escrita por nós. A IA só interpreta as cartas que o sorteio tirou e nunca as escolhe.</p>
+</div></section>
+
+</main>
+<footer class="rodape-site"><div class="wrap">
+  <div>
+    <p><strong>O Céu Avisa</strong> · astrologia e tarô sobre o mundo</p>
+    <p><span class="selo">Conteúdo feito com IA</span> Tales e Lira são personagens de computador; textos e vozes são gerados por IA. Astrologia e tarô são para reflexão e entretenimento.</p>
+    <p>Contato: <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a></p>
+  </div>
+  <nav aria-label="Rodapé">
+    <a class="so-venda" href="/leitura/">Pedir leitura</a>
+    <a href="/perguntas/">Perguntas</a>
+    <a href="/sorteio/">Confira o sorteio</a>
+    <a href="/privacidade.html">Privacidade</a>
+    <a href="/termos.html">Termos</a>
+    <a href="https://www.youtube.com/channel/UC0RSvlqVQVnGeF4RLn_7RAg">YouTube</a>
+    <a href="https://www.instagram.com/oceuavisa">Instagram</a>
+    <a href="https://www.tiktok.com/@oceuavisa">TikTok</a>
+  </nav>
+</div></footer>
+
+<script src="/ativos/sorteio.js"></script>
+<script>
+(function () {
+  "use strict";
+  var BARALHO_SHA = "05cfe8275fd81f54d6f98c0434d6c851433ef7a5727da31e17104cbe60fef2a6";
+  var form = document.getElementById("form-sorteio");
+  var campo = document.getElementById("seed");
+  var saida = document.getElementById("resultado");
+  var baralho = null;
+
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function aviso(txt) { saida.replaceChildren(el("p", "aviso", txt)); }
+
+  function carregar() {
+    if (baralho) return Promise.resolve(baralho);
+    return fetch("/ativos/baralho-rws-78.json").then(function (r) {
+      if (!r.ok) throw new Error("baralho");
+      return r.json();
+    }).then(function (d) {
+      return SorteioOCA.hashBaralho(d.cartas).then(function (h) {
+        if (h !== BARALHO_SHA) throw new Error("hash");
+        baralho = d.cartas; return baralho;
+      });
+    });
+  }
+
+  function nomesPosicoes(n, pos) {
+    var nomes = (pos || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+    if (nomes.length === n) return nomes;
+    return n === 10 ? ["Keter", "Chokmah", "Binah", "Chesed", "Geburah", "Tiferet", "Netzach", "Hod", "Yesod", "Malkuth"] : null;
+  }
+
+  function mostrar(seed, n, pos) {
+    if (!seed) { aviso("Cole a seed do vídeo."); campo.focus(); return; }
+    if (!(window.crypto && crypto.subtle && window.BigInt)) { aviso("Este navegador é antigo demais para o sorteio. Tente um Chrome, Safari ou Firefox atual."); return; }
+    carregar().then(function (cartas) {
+      return SorteioOCA.sortear(cartas, n, seed);
+    }).then(function (tiradas) {
+      var nomes = nomesPosicoes(n, pos);
+      var titulo = el("h2", null, "As cartas desta seed");
+      var info = el("p");
+      info.append("Seed ", el("span", "marc mono", seed), ", baralho ", el("span", "marc", "rws-78"), ", " + n + (n === 1 ? " carta." : " cartas."));
+      var lista = el("ol", "tiragem");
+      tiradas.forEach(function (c, i) {
+        var li = el("li");
+        li.append(el("span", "pos", nomes ? nomes[i] : (i + 1) + "ª carta"), el("span", "nome", c.name));
+        var inv = c.orientation === "invertida";
+        li.append(el("span", "ori" + (inv ? " inv" : ""), inv ? "invertida" : "direita"));
+        lista.append(li);
+      });
+      var dica = el("p", null, "As cartas não batem com o vídeo? Confira se a seed foi copiada inteira e se a quantidade de cartas está certa. Se ainda assim não bater, escreva para oceuavisa@gmail.com.");
+      dica.style.color = "var(--suave)"; dica.style.marginTop = "16px";
+      saida.replaceChildren(titulo, info, lista, dica);
+    }).catch(function (e) {
+      aviso(e && e.message === "hash"
+        ? "A lista de cartas desta página não confere com o baralho rws-78. Não confie neste resultado e avise a gente em oceuavisa@gmail.com."
+        : "Não foi possível carregar o baralho. Verifique a conexão e tente de novo.");
+    });
+  }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var seed = campo.value.trim();
+    var n = parseInt(form.querySelector("input[name=n]:checked").value, 10);
+    var q = new URLSearchParams(location.search);
+    q.set("seed", seed); q.set("n", String(n));
+    var pos = (q.get("pos") || "").split(",").filter(function (s) { return s.trim(); });
+    if (pos.length !== n) q.delete("pos");
+    history.replaceState(null, "", "?" + q.toString());
+    mostrar(seed, n, q.get("pos"));
+  });
+
+  // link direto: /sorteio/?seed=…&n=3&pos=O clima,O desafio,O conselho
+  var q = new URLSearchParams(location.search);
+  var n = parseInt(q.get("n") || "", 10);
+  if ([1, 3, 10].indexOf(n) >= 0) form.querySelector("input[name=n][value='" + n + "']").checked = true;
+  if (q.get("seed")) {
+    campo.value = q.get("seed").trim();
+    mostrar(campo.value, [1, 3, 10].indexOf(n) >= 0 ? n : 3, q.get("pos"));
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha leitura — O Céu Avisa</title>
+<meta name="description" content="Página privada com o vídeo e o PDF da sua leitura.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B1026">
+<meta property="og:title" content="Minha leitura — O Céu Avisa"><meta property="og:description" content="Página privada com o vídeo e o PDF da sua leitura."><meta property="og:image" content="https://oceuavisa.com.br/ativos/dupla-grande.webp"><meta property="og:locale" content="pt_BR">
+<link rel="icon" href="/foto-perfil.png">
+<link rel="preload" href="/ativos/fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/ativos/config.js"></script>
+<link rel="stylesheet" href="/ativos/site.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo"><div class="wrap">
+  <a class="marca" href="/"><img src="/ativos/dupla.webp" width="38" height="38" alt="">O Céu Avisa</a>
+  <nav aria-label="Principal">
+    <a class="opc" href="/#como-funciona">Como funciona</a>
+    <a class="opc" href="/perguntas/">Perguntas</a>
+    <a class="cta-mini so-venda" href="/leitura/">Quero a minha leitura</a>
+  </nav>
+</div></header>
+<main id="conteudo">
+
+<div class="modo-demo" id="demo" hidden>Modo demonstração: esta é uma página de exemplo, sem leitura de verdade.</div>
+<section><div class="wrap estreito">
+  <span class="sobre">Sua leitura</span>
+  <h1>Minha leitura</h1>
+  <div id="sem-token" hidden>
+    <p class="lead">Este link está incompleto. Abra a página pelo link que chegou no seu e-mail.</p>
+    <p class="suave">Se você já perdeu o e-mail, escreva para <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a> com o número do pedido.</p>
+  </div>
+  <div id="com-token" hidden>
+    <p class="lead">Aqui estão o vídeo e o PDF da sua leitura. Este link vale por <strong id="validade">30 dias</strong>; depois disso, tudo é apagado. Baixe o vídeo e o PDF para guardar.</p>
+    <div class="grade dois" style="margin:24px 0">
+      <div class="cartao"><h3>Vídeo</h3>
+        <div class="poster" id="video-area" role="img" aria-label="Espaço do vídeo da sua leitura" style="margin:0 auto 14px"><span class="tag">Conteúdo gerado por IA</span><div class="roda"></div><div class="rodape"><img src="/ativos/dupla.webp" width="256" height="256" alt=""></div></div>
+        <p class="suave pequeno" id="video-estado">Quando a leitura estiver pronta, o vídeo toca aqui.</p>
+        <a class="btn cheio" id="video-baixar" href="#" aria-disabled="true" download>Baixar o vídeo</a></div>
+      <div class="cartao"><h3>PDF</h3><p>A mesma leitura por escrito, para guardar.</p>
+        <a class="btn cheio" id="pdf-link" href="#" aria-disabled="true">Baixar o PDF</a>
+        <p class="suave pequeno" style="margin-top:12px" id="pdf-estado">Disponível quando a leitura estiver pronta.</p></div>
+    </div>
+    <div class="aviso info"><strong>Feito por IA, para reflexão e entretenimento.</strong> A seed de cada sorteio aparece no vídeo e no PDF, e você confere as cartas na <a href="/sorteio/">página do sorteio</a>. Algo com defeito? Escreva para <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a>. Quer apagar os seus dados antes dos 30 dias? É só pedir por lá.</div>
+  </div>
+</div></section>
+
+</main>
+<footer class="rodape-site"><div class="wrap">
+  <div>
+    <p><strong>O Céu Avisa</strong> · astrologia e tarô sobre o mundo</p>
+    <p><span class="selo">Conteúdo feito com IA</span> Tales e Lira são personagens de computador; textos e vozes são gerados por IA. Astrologia e tarô são para reflexão e entretenimento.</p>
+    <p>Contato: <a href="mailto:oceuavisa@gmail.com">oceuavisa@gmail.com</a></p>
+  </div>
+  <nav aria-label="Rodapé">
+    <a class="so-venda" href="/leitura/">Pedir leitura</a>
+    <a href="/perguntas/">Perguntas</a>
+    <a href="/privacidade.html">Privacidade</a>
+    <a href="/termos.html">Termos</a>
+    <a href="https://www.youtube.com/channel/UC0RSvlqVQVnGeF4RLn_7RAg">YouTube</a>
+    <a href="https://www.instagram.com/oceuavisa">Instagram</a>
+    <a href="https://www.tiktok.com/@oceuavisa">TikTok</a>
+  </nav>
+</div></footer>
+<script src="/ativos/config.js"></script>
+<script>
+/* Página de entrega (ETAPA-32 §4, "Entrega segura e e-mail"). O token vem do e-mail no FRAGMENTO
+   (/minha-leitura#t=…), que o navegador não manda a servidor nenhum. Um link antigo com ?t= é
+   convertido para #t= na hora, para o token sair do endereço que vai a servidores e logs.
+   Com API_URL configurada: POST {API_URL}/leitura com {"t": token} (nunca em query string) e espera
+   {estado:"pronta"|"em_preparo"|"expirada", video_url, video_download_url, pdf_url, expira_em};
+   as URLs são pré-assinadas e valem ~1 h. Sem API_URL (demonstração), só mostra o desenho da página. */
+(function(){
+ var cfg=window.OCA_CONFIG||{},q=new URLSearchParams(location.search),t=new URLSearchParams(location.hash.slice(1)).get("t");
+ if(!t&&q.get("t")){t=q.get("t");try{history.replaceState(null,"",location.pathname+"#t="+encodeURIComponent(t))}catch(e){}}
+ var sem=document.getElementById("sem-token"),com=document.getElementById("com-token");
+ if(!t){sem.hidden=false;return}
+ com.hidden=false;
+ if(!cfg.API_URL){document.getElementById("demo").hidden=false;return}
+ fetch(cfg.API_URL+"/leitura",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({t:t}),referrerPolicy:"no-referrer",cache:"no-store"})
+ .then(function(r){return r.json()}).then(function(d){
+  if(d.estado==="expirada"){com.hidden=true;sem.hidden=false;sem.querySelector(".lead").textContent="Este link expirou: a leitura foi apagada depois de 30 dias.";return}
+  if(d.estado!=="pronta")return;
+  var area=document.getElementById("video-area"),v=document.createElement("video");
+  v.controls=true;v.preload="metadata";v.src=d.video_url;v.setAttribute("playsinline","");v.style.cssText="width:100%;border-radius:12px;max-height:70vh";
+  area.replaceWith(v);document.getElementById("video-estado").textContent="";
+  var b=document.getElementById("video-baixar");b.href=d.video_download_url||d.video_url;b.removeAttribute("aria-disabled");
+  var a=document.getElementById("pdf-link");a.href=d.pdf_url;a.removeAttribute("aria-disabled");document.getElementById("pdf-estado").textContent="";
+  if(d.expira_em)document.getElementById("validade").textContent="até "+new Date(d.expira_em).toLocaleDateString("pt-BR");
+ }).catch(function(){});
+})();
+</script>
+</body>
+</html>
