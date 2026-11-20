@@ -161,6 +161,9 @@ input[aria-invalid=true],textarea[aria-invalid=true]{border-color:var(--coral)}
 /* interruptor da venda (ativos/config.js): sem data-venda="aberta" tudo que é de compra some */
 html:not([data-venda="aberta"]) .so-venda{display:none!important}
 html[data-venda="aberta"] .so-fechada{display:none!important}
+/* preço (config.js PRECO): "esconder" tira .so-preco e mostra .sem-preco */
+html[data-preco="esconder"] .so-preco{display:none!important}
+html:not([data-preco="esconder"]) .sem-preco{display:none!important}
 /* lista de espera (config.js MODO "espera"): .so-espera só aparece nesse modo; .nao-espera some nele */
 html:not([data-venda="espera"]) .so-espera{display:none!important}
 html[data-venda="espera"] .nao-espera{display:none!important}

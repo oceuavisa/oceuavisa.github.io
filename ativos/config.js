@@ -17,11 +17,18 @@ window.OCA_CONFIG = {
      `ferramentas/leitura/aws/implantar.sh tudo`. Vazia = a lista em MODO DEMONSTRAÇÃO (nada é enviado). */
   LISTA_URL: "https://hpcwv4ieyo7z4o5dle4eyhbgri0gpqxp.lambda-url.us-east-1.on.aws",  /* implantada em 12/11/2026 */
 
+  /* PREÇO NAS PÁGINAS (decisão pendente do Eduardo, ver README "Preço e pagamento"):
+     "mostrar"  = /leitura/, Perguntas e Obrigado citam o preço previsto (R$ 29,90) e o pagamento.
+     "esconder" = essas menções somem e entra um texto neutro ("o valor será informado quando os pedidos abrirem"). */
+  PRECO: "mostrar",
+
   PRECO_LANCAMENTO: "R$ 29,90",
   PRECO_CHEIO: "R$ 49,90"
 };
 /* compatibilidade com o interruptor antigo */
 window.OCA_CONFIG.VENDA_ABERTA = window.OCA_CONFIG.MODO === "aberta";
+
+document.documentElement.setAttribute("data-preco", window.OCA_CONFIG.PRECO === "esconder" ? "esconder" : "mostrar");
 
 /* Sem este script o site fica no modo seguro: sem venda e sem lista (data-venda ausente = fechada). */
 document.documentElement.setAttribute("data-venda",

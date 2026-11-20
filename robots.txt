@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado/
+Disallow: /minha-leitura/
+Disallow: /tiktok/
+
+Sitemap: https://oceuavisa.com.br/sitemap.xml
