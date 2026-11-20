@@ -22,6 +22,14 @@ window.OCA_CONFIG = {
      "esconder" = essas menções somem e entra um texto neutro ("o valor será informado quando os pedidos abrirem"). */
   PRECO: "mostrar",
 
+  /* CUPOM DE FUNDADOR da lista de espera (decisão de 20/11): quem entra na lista ganha um código na hora, e a
+     primeira leitura sai por PRECO_LANCAMENTO em vez de PRECO_CHEIO (preço aprovado em 11/11).
+     Trocar o preço = mudar PRECO_CHEIO/PRECO_LANCAMENTO aqui E PRECO_CHEIO/PRECO_CUPOM em
+     ferramentas/leitura/aws/lista_espera.py (a Lambda grava o preço no cupom; a tela de obrigado mostra o dela).
+     /leitura/ troca os números sozinha; a home (index.html) e privacidade.html (30 dias) têm o número
+     escrito no HTML: `grep -n "cupom\|29,90" index.html privacidade.html` e troque lá também. */
+  CUPOM_DIAS: 30,     /* validade: dias depois da abertura dos pedidos */
+
   PRECO_LANCAMENTO: "R$ 29,90",
   PRECO_CHEIO: "R$ 49,90"
 };

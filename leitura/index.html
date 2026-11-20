@@ -27,7 +27,7 @@
 <link rel="preload" href="/ativos/fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <script src="/ativos/config.js"></script>
 <script src="/ativos/metrica.js"></script>
-<link rel="stylesheet" href="/ativos/site.css?v=20261117a">
+<link rel="stylesheet" href="/ativos/site.css?v=20261120a">
 </head>
 <body>
 <a class="pular" href="#conteudo">Ir para o conteúdo</a>
@@ -37,7 +37,7 @@
     <a class="opc" href="/#como-funciona">Como funciona</a>
     <a class="opc" href="/perguntas/">Perguntas</a>
     <a class="cta-mini so-venda" href="/leitura/">Quero a minha leitura</a>
-    <a class="cta-mini so-espera" href="#lista">Avise-me</a>
+    <a class="cta-mini so-espera" href="#lista">Ganhe o cupom</a>
   </nav>
 </div></header>
 <main id="conteudo">
@@ -51,8 +51,8 @@
     <span class="sobre">Leitura personalizada · astrologia + tarô</span>
     <h1>O seu céu e as suas cartas, em vídeo.</h1>
     <p class="lead">Você conta três perguntas e a data em que nasceu. O Tales lê o seu mapa e os próximos meses do céu, a Lira tira as cartas de cada pergunta, e você recebe um <strong>vídeo vertical de 7 a 9 minutos</strong> e um <strong>PDF</strong> no seu e-mail, <strong>em até 48 horas</strong>.</p>
-    <div class="aviso info"><strong>Os pedidos ainda não abriram.</strong> Deixe o seu e-mail e a gente avisa uma vez, quando abrir. Não há nada para pagar agora.</div>
-    <div class="acoes"><a class="btn" href="#lista">Quero ser avisada(o)</a><a class="btn sec" href="#como">Como funciona</a></div>
+    <div class="aviso info"><strong>Os pedidos ainda não abriram.</strong> Entre na lista e ganhe o <strong>cupom de fundador: de <s><span class="cupom-cheio">R$ 49,90</span></s> por <span class="cupom-preco">R$ 29,90</span> na sua primeira leitura</strong>, quando abrir. Não há nada para pagar agora.</div>
+    <div class="acoes"><a class="btn" href="#lista">Quero o meu cupom</a><a class="btn sec" href="#como">Como funciona</a></div>
     <p class="pequeno suave">Conteúdo feito com IA, para reflexão e entretenimento. Para maiores de 18 anos.</p>
   </div>
   <div class="dupla"><img src="/ativos/dupla-grande.webp" width="600" height="600" alt="Tales e Lira, os dois apresentadores do canal, desenhados em estilo ilustrado, diante de um céu estrelado"></div>
@@ -87,7 +87,7 @@
         <li>Vídeo vertical (9:16) de 7 a 9 minutos, um capítulo por pergunta, com o seu nome na tela e na voz e legenda palavra a palavra.</li>
         <li>PDF de 6 a 10 páginas com o mapa, a linha do tempo dos trânsitos e as cartas.</li>
         <li>Entrega agendada, em até 48 horas, com a data mostrada antes de você confirmar o pedido.</li>
-        <li class="so-preco">Preço de lançamento previsto: <strong>R$ 29,90</strong> (depois, R$ 49,90). O valor final aparece na tela antes do pagamento.</li>
+        <li class="so-preco">Preço: <strong><span class="cupom-cheio">R$ 49,90</span></strong>. Quem está na lista paga <strong><span class="cupom-preco">R$ 29,90</span></strong> na primeira leitura, com o cupom de fundador. O valor final aparece na tela antes do pagamento.</li>
         <li class="sem-preco">O valor e a forma de pagamento serão informados quando os pedidos abrirem, e quem está na lista é avisado primeiro.</li>
       </ul></div>
     <div class="cartao"><h3>O que a leitura não responde</h3>
@@ -104,9 +104,16 @@
 </div></section>
 
 <section id="lista" class="faixa so-espera"><div class="wrap estreito lista-espera">
-  <span class="sobre">Lista de espera</span>
-  <h2>Avise-me quando abrir</h2>
-  <p>Só o seu e-mail. A gente escreve <strong>uma vez</strong>, quando os pedidos abrirem, e depois apaga a lista.</p>
+  <span class="sobre">Lista de espera · cupom de fundador</span>
+  <h2>De <s><span class="cupom-cheio">R$ 49,90</span></s> por <span class="cupom-preco">R$ 29,90</span> na sua primeira leitura</h2>
+  <p>Para quem está na lista: <strong>cupom de fundador, sem cobrança agora</strong>. Só o seu e-mail. Você vê o seu cupom na hora, nesta página, e a gente escreve <strong>uma vez</strong>, quando os pedidos abrirem.</p>
+  <!-- Os preços e a validade vêm de PRECO_CHEIO, PRECO_LANCAMENTO e CUPOM_DIAS em /ativos/config.js (lista.js troca os números). -->
+  <ul class="lista ok regras-cupom">
+    <li><strong>Nada é cobrado agora</strong> e o cupom não obriga a comprar.</li>
+    <li>Uso único: vale para <strong>uma</strong> leitura, a primeira.</li>
+    <li>Vale só para o e-mail cadastrado aqui.</li>
+    <li>Validade: até <strong><span class="cupom-dias">30</span> dias depois da abertura</strong> dos pedidos.</li>
+  </ul>
   <div class="modo-demo" id="lista-demo" style="border-radius:10px;margin-bottom:16px" hidden>Modo demonstração: nada é enviado.</div>
 
   <form id="form-lista" novalidate>
@@ -114,13 +121,23 @@
       <input id="lista-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="e-lista-email"><div class="erro" id="e-lista-email" role="alert"></div></div>
     <div class="isca" aria-hidden="true"><label for="lista-site">Não preencha este campo</label><input id="lista-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>
     <label class="marca-check" for="lista-18"><input type="checkbox" id="lista-18" name="maior18" aria-describedby="e-lista-18"><span>Tenho <strong>18 anos ou mais</strong>.</span></label><div class="erro" id="e-lista-18" role="alert"></div>
-    <div class="destaque"><label class="marca-check" for="lista-consent"><input type="checkbox" id="lista-consent" name="consentimento" aria-describedby="e-lista-consent"><span><strong>Autorizo o uso do meu e-mail só para me avisarem quando a leitura abrir.</strong> Guardamos também a data e o link pelo qual você chegou (qual vídeo ou rede). Nada é vendido nem repassado, e a lista é apagada depois do aviso. Posso sair quando quiser, aqui embaixo ou pelo e-mail do canal. <a href="/privacidade.html#lista-de-espera" target="_blank" rel="noopener">Política de privacidade</a>.</span></label></div>
+    <div class="destaque"><label class="marca-check" for="lista-consent"><input type="checkbox" id="lista-consent" name="consentimento" aria-describedby="e-lista-consent"><span><strong>Autorizo o uso do meu e-mail só para me avisarem quando a leitura abrir e para ligar a ele o meu cupom de fundador.</strong> Guardamos também a data e o link pelo qual você chegou (qual vídeo ou rede). Nada é vendido nem repassado, e a lista é apagada quando o cupom vence (<span class="cupom-dias">30</span> dias depois da abertura). Posso sair quando quiser, aqui embaixo ou pelo e-mail do canal (o cupom deixa de valer). <a href="/privacidade.html#lista-de-espera" target="_blank" rel="noopener">Política de privacidade</a>.</span></label></div>
     <div class="erro" id="e-lista-consent" role="alert"></div>
     <label class="marca-check" for="lista-novidades"><input type="checkbox" id="lista-novidades" name="novidades"><span><span class="suave">(opcional)</span> Também quero receber novidades do canal por e-mail. Posso sair quando quiser.</span></label>
     <div class="aviso info" id="lista-erro" role="alert" hidden></div>
-    <button class="btn cheio" type="submit" id="lista-btn">Quero ser avisada(o)</button>
+    <button class="btn cheio" type="submit" id="lista-btn">Quero o meu cupom</button>
   </form>
-  <div class="ok-lista" id="lista-ok" role="status" tabindex="-1" hidden><strong>Pronto, você está na lista.</strong> Quando os pedidos abrirem, você recebe um e-mail do O Céu Avisa. <span id="lista-ok-demo" hidden>(Demonstração: nada foi enviado.)</span></div>
+  <div class="ok-lista" id="lista-ok" role="status" tabindex="-1" hidden>
+    <strong>Pronto, você está na lista.</strong>
+    <div class="cupom" id="lista-cupom" hidden>
+      <span class="cupom-rotulo">Seu cupom de fundador</span>
+      <code class="cupom-codigo" id="lista-cupom-codigo"></code>
+      <button class="btn sec" type="button" id="lista-cupom-copiar">Copiar o código</button>
+      <span class="cupom-pct-linha">A sua primeira leitura sai por <strong id="lista-cupom-preco">R$ 29,90</strong> em vez de <s id="lista-cupom-cheio">R$ 49,90</s> · uso único · só para este e-mail · até <span class="cupom-dias">30</span> dias depois da abertura.</span>
+    </div>
+    <p><strong>Anote o código ou tire um print.</strong> Ele fica ligado ao seu e-mail: se você esquecer, é só se inscrever de novo com o mesmo e-mail que o mesmo cupom aparece. Quando os pedidos abrirem, você recebe um e-mail do O Céu Avisa.</p>
+    <span id="lista-ok-demo" hidden>(Demonstração: nada foi enviado e o código é de exemplo.)</span>
+  </div>
 
   <details class="sair-lista" style="margin-top:22px"><summary>Quero sair da lista</summary>
     <form id="form-sair" novalidate>
@@ -128,7 +145,7 @@
         <input id="sair-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="e-sair-email"><div class="erro" id="e-sair-email" role="alert"></div></div>
       <button class="btn sec cheio" type="submit" id="sair-btn">Tirar o meu e-mail da lista</button>
     </form>
-    <div class="ok-lista" id="sair-ok" role="status" hidden>Se este e-mail estava na lista, ele foi apagado. Você não vai receber o aviso.</div>
+    <div class="ok-lista" id="sair-ok" role="status" hidden>Se este e-mail estava na lista, ele foi apagado, e o cupom ligado a ele deixou de valer. Você não vai receber o aviso.</div>
   </details>
 </div></section>
 
@@ -242,8 +259,8 @@
     <a href="https://www.tiktok.com/@oceuavisa">TikTok</a>
   </nav>
 </div></footer>
-<script src="/ativos/config.js"></script>
+<script src="/ativos/config.js?v=20261120a"></script>
 <script src="/ativos/leitura.js"></script>
-<script src="/ativos/lista.js"></script>
+<script src="/ativos/lista.js?v=20261120a"></script>
 </body>
 </html>

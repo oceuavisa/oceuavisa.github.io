@@ -170,6 +170,13 @@ html[data-venda="espera"] .nao-espera{display:none!important}
 .lista-espera input[type=email]{font-size:1.05rem}
 .isca{position:absolute!important;left:-5000px!important;width:1px;height:1px;overflow:hidden}
 .ok-lista{border-left:4px solid var(--verde);background:rgba(127,209,168,.10);padding:16px 18px;border-radius:0 12px 12px 0;margin:0 0 16px}
+.ok-lista p{margin:12px 0 0}
+.regras-cupom{margin:0 0 18px}
+.cupom{display:grid;gap:10px;justify-items:start;margin:14px 0 4px;padding:16px;border:2px dashed var(--ouro);border-radius:12px;background:rgba(232,185,74,.08)}
+.cupom-rotulo{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ouro)}
+.cupom-codigo{font:700 clamp(1.5rem,6vw,2rem)/1.1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.06em;user-select:all;word-break:break-all}
+.cupom-pct-linha{font-size:.92rem}
+.cupom-pct-linha strong,.cupom-pct-linha s,.cupom-cheio,.cupom-preco{white-space:nowrap}
 .dupla-mini{display:flex;gap:14px;align-items:center;margin:0 0 6px}
 .dupla-mini img{width:64px;height:64px;border-radius:50%;border:2px solid rgba(232,185,74,.5);object-fit:cover}
 .sair-lista summary{cursor:pointer;color:var(--suave);font-size:.95rem}
