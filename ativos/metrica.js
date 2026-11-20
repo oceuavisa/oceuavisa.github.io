@@ -36,15 +36,28 @@
     [["s", "utm_source"], ["m", "utm_medium"], ["c", "utm_campaign"], ["u", "utm_content"]].forEach(function (par) {
       if (utm[par[1]]) d[par[0]] = utm[par[1]];
     });
+    var interna = false;
     if (document.referrer) {
       var r = new URL(document.referrer).hostname.replace(/^www\./, "").toLowerCase();
-      if (r === "oceuavisa.com.br") return; /* navegação dentro do site: não é uma nova visita */
-      if (r && /^[a-z0-9.\-]{1,80}$/.test(r)) d.r = r;
+      if (r === "oceuavisa.com.br") interna = true; /* navegação dentro do site: não é uma nova visita */
+      else if (r && /^[a-z0-9.\-]{1,80}$/.test(r)) d.r = r;
     }
     /* text/plain: pedido "simples", sem preflight; keepalive deixa a mensagem sair mesmo se a pessoa fechar a aba. */
-    fetch(VISITAS_URL + "/v", {
-      method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(d),
-      credentials: "omit", referrerPolicy: "no-referrer", keepalive: true, cache: "no-store"
-    }).catch(function () {});
+    var enviar = function (corpo) {
+      fetch(VISITAS_URL + "/v", {
+        method: "POST", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(corpo),
+        credentials: "omit", referrerPolicy: "no-referrer", keepalive: true, cache: "no-store"
+      }).catch(function () {});
+    };
+    if (!interna) enviar(d);
+    /* Clique em "Quero a minha leitura": mais um contador do dia (mesmos campos + e:"clique"), nada de pessoa. */
+    document.addEventListener("click", function (ev) {
+      try {
+        var a = ev.target && ev.target.closest && ev.target.closest("a");
+        if (!a || !/quero a minha leitura/i.test(a.textContent || "")) return;
+        var c = {}; for (var k in d) c[k] = d[k];
+        c.e = "clique"; enviar(c);
+      } catch (e) { /* idem */ }
+    });
   } catch (e) { /* medir nunca pode quebrar a página */ }
 })();
